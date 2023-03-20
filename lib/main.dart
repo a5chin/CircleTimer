@@ -11,12 +11,18 @@ class CircleTimer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color indicatorColor = Theme.of(context).indicatorColor;
+
     return MaterialApp(
       title: 'CircleTimer',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TopPage(),
+      home: TopPage(
+        backgroundColor: Colors.black87,
+        indicatorColor: indicatorColor,
+        textColor: Colors.white,
+      ),
     );
   }
 }
